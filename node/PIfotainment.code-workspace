@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "PIfotainment",
+			"path": ".."
+		},
+		{
+			"name": "nospeakerpop",
+			"path": "../nospeakerpop"
+		},
+		{
+			"name": "node",
+			"path": "."
+		}
+	],
+	"settings": {}
+}

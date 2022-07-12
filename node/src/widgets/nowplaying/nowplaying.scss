@@ -1,0 +1,97 @@
+@import "../global.scss";
+
+
+.test{
+    position: fixed;
+    width:100px;
+    height:100px;
+    top:5px;
+    background-color: blue;
+}
+
+.widget{
+   &.nowplaying{
+        min-width:90%;
+        min-height:15%;
+        //max-width:60%;
+        max-height: 20%;
+        box-shadow: none;
+        background: none;
+        left: 1%;
+        bottom:1%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        border-top: 2px solid rgba(7, 16, 19, 0.2);
+        .album{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 28%;
+            height: 90%;
+            padding:3.25px;
+            //margin-left:5%;
+            background: $hotpink;
+
+            h1{
+                color: #242038;
+                font-size: 26px;
+                word-wrap: normal;
+                padding: 0;
+                margin: 0;
+                margin-top: 1px;
+                text-align: center;
+            }
+            img{
+                width: auto;
+                height: auto;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        .trackinfo{
+            margin-left:3%;
+            width:100%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: space-around;
+            progress{
+                font-size: 40px;
+            }
+            span{
+                margin-bottom:5px;
+                font-style: italic;
+                font-weight: 200;
+                margin-bottom:15px;
+            }
+
+            h2, p{
+                text-align: center;
+                //text-overflow: ellipsis;
+                margin:0;
+                //margin-top:15px;
+            }
+            h2{
+                font-size:60px;
+                font-style: normal;
+                font-weight: 800;
+                //overflow: hidden;
+                &.artist{
+                    font-size:48px;
+                    color:$textcolor;
+                }
+            }
+            p{
+                font-size: 25px; 
+                margin-bottom:30px;
+                color: $hotpink;
+                font-style: italic;
+                font-weight: bold;
+                opacity: .8;
+            }
+        }
+   }
+}

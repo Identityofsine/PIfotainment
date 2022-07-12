@@ -1,0 +1,118 @@
+<MyButton@Button>:
+    size_hint: [None, None]
+    size: [25, 25]
+<MyText@Label>:
+    size_hint: [None, None]
+    size: [100, 100]
+<CenterText@Label>:
+    font_name:'Virgil'
+    size_hint_x: None
+    width: self.texture_size[0]
+    bold: True
+    color: 255/255, 105/255, 180/255, 1
+    font_size: 16 * (root.y)
+    halign:"center"
+    valign:"bottom"
+<ColoredScrollView@ScrollView>:
+    canvas.before:
+        Color:
+            rgba: 235/255, 94/255, 85/255, .2
+        Rectangle:
+            pos: self.pos
+            size: self.width, self.height - 25
+
+
+#:set roundamount 5
+<PlayerWidget>:
+    scroller:scroller
+    scrollero:scrollero
+    scrollert:scrollert
+    song:song
+    album:album
+    artist:artist
+    image:image
+    BoxLayout:
+        #pos_hint: {"x":0.56, "top": .110}
+        size_hint: .4, .2
+        canvas.before:
+            Color:
+                rgba: 46/255, 47/255, 35/255, 1
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [roundamount]
+            Color:
+                rgba: 235/255, 94/255, 85/255, 1
+            Line:
+                width: 1    
+                rectangle: self.x, self.y, self.width, self.height
+        
+        cols:3
+        GridLayout:
+            cols:3
+            AnchorLayout:
+                #size_hint: 1,1
+                anchor_x:'center'
+                anchor_y:'center'
+                AsyncImage:
+                    id:image
+                    nocache:True
+                    size_hint_x: .75
+                    size_hint_y: .75
+
+                    canvas.after:
+                        Color:
+                            rgba: 235/255, 94/255, 85/255, 1
+                        Line:
+                            width: 1    
+                            rectangle: self.x, self.y, self.width, self.height
+            GridLayout:
+                size_hint: 1,1
+                rows:3
+                ColoredScrollView:
+                    id:scroller
+                    CenterText:
+                        id:song
+                        text:"test"
+                ColoredScrollView:
+                    id:scrollero
+                    CenterText:
+                        id:album
+                        text:"Album"
+                ColoredScrollView:
+                    id:scrollert
+                    CenterText:
+                        id:artist
+                        text:"Aritst"
+
+            AnchorLayout:
+                size_hint: None,None
+                anchor_x:'center'
+                anchor_y:'center'
+                MyButton:
+                    text:"Change"
+                    on_release:root.changetext()
+
+<TestWidget>:
+    size:root.width, root.height
+    canvas.before:
+        Color:
+            rgba: 28/255, 29/255, 33/255, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    AnchorLayout:
+        anchor_x:'right'
+        anchor_y:'bottom'
+        padding:50 
+        PlayerWidget   
+    AnchorLayout:
+        anchor_x:'left'
+        anchor_y:'top'
+        CenterText:
+            text:'ouch'        
+
+
+
+
+   

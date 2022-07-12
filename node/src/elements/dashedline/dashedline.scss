@@ -1,0 +1,14 @@
+@import "../../widgets/global.scss";
+.dashed{
+    width: 100%;
+    text-overflow: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 48px;
+    padding:0;
+    transform: rotate(180deg);
+    color:$hotpink;
+    opacity: .5;
+    mask-image: linear-gradient(0deg, rgba(255, 105, 180, 0) 0%, rgb(255, 105, 180) 50%, rgba(33, 34, 39, 0) 100%);
+    
+}

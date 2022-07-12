@@ -1,0 +1,14 @@
+@import "../global.scss";
+.nnf{
+    svg{
+        font-size: 32px;
+        margin: 0;
+        padding: 0;
+    }
+    h2{
+        font-size:32px;
+        margin:5px;
+        color:$textcolor;
+        transform: scaleY(1.5);
+    }
+}

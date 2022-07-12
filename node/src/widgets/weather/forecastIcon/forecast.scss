@@ -1,0 +1,82 @@
+.forecastItem{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    //border: 2px solid red;
+    width:68px;
+    padding:12px;
+    background-color: black;
+    border: 2px solid;
+    margin-bottom: 125px;
+    &.same{
+        width:72px;
+        border: 2px solid red;
+        transform: translatey(-20px);
+    }
+    svg{
+        padding-left: 14px;
+        transform: scale(2);
+        filter: invert(68%) sepia(41%) saturate(4533%) hue-rotate(295deg) brightness(101%) contrast(101%);
+    }
+    .row{
+        position: absolute;
+        right: 8px;
+        top: 47px;
+        h1{
+            
+            transform: scaleY(1);
+        }
+        .temp{
+            position: relative;
+            h2{
+                font-size:24px;
+                padding: 0 5px;
+                margin:0;
+            }
+            p{
+                position: absolute;
+                font-size: 16px;
+                font-weight: bold;
+                font-style: italic;
+                color:#EEEEEE;
+                top: 10px;
+                right: 15px;
+
+            }
+        }
+    }
+    .text{
+        position: absolute;
+        -webkit-text-stroke: 1px black;
+        left: 9%;
+        top: 100%;
+        max-width: 80px; 
+        hyphens: auto;
+        
+        
+        span{
+            margin:0;
+            padding:0;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            word-wrap: break-word;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size:36px;
+            font-weight: bold;
+            font-style: italic;
+            text-shadow: none;
+        }
+    }
+    .day{
+        bottom: 105%;
+        position: absolute;
+
+        span{
+            color:rgb(235 81 96);
+            font-size:32px;
+        }
+    }
+}

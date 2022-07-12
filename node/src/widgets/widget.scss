@@ -1,0 +1,27 @@
+@import "./global.scss";
+.widget{
+    position: absolute;
+    display:flex;
+    border-radius: 5px;
+    color:$textcolor;
+    transition: .2s all;
+    padding:20px;
+    // box-shadow:
+    // 0 0 5px 5px #6D72C3,  /* inner white */
+    // 0 0 100px 10px #EB5160, /* middle magenta */
+    // 0 0 150px 5px #25303139; /* outer cyan */
+    h2,p, span{
+        font-style: italic;
+    }
+    .glow{
+        text-shadow:
+        0 0 16px #570047,
+        0 0 20px #570047,
+        0 0 24px #570047,
+        0 0 28px #570047,
+        0 0 32px #570047;
+    }
+    h2{
+        color:$hotpink;
+    }
+}

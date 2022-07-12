@@ -1,0 +1,14 @@
+    .scroll {
+        overflow: hidden;
+        display: flex;
+        max-width: 760px;
+        transform: translate3d(0,0,0);
+        perspective: 1000; 
+        backface-visibility: hidden;
+        >*{
+            white-space: nowrap;
+            transition: 30s transform;
+            transition-timing-function: linear;
+            width: 100%;
+        }
+    }
